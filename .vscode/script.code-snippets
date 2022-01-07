@@ -1,0 +1,10 @@
+{
+  "Print to console": {
+    "prefix": "script",
+    "body": [
+      "<script lang='ts' setup>",
+      "</script>",
+    ],
+    "description": "Log output to console"
+  }
+}

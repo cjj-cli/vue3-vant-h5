@@ -1,0 +1,10 @@
+{
+  "Print to console": {
+    "prefix": "style",
+    "body": [
+      "<style lang='less' scoped>",
+      "</style>",
+    ],
+    "description": "Log output to console"
+  }
+}

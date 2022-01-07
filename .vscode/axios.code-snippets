@@ -1,0 +1,10 @@
+{
+  "Print to console": {
+    "prefix": "axios",
+    "body": [
+      "import { post } from '@/utils/axios';",
+      "import commonHandle from '@/api/commonHandle';",
+    ],
+    "description": "Log output to console"
+  }
+}

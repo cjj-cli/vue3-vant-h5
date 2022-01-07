@@ -1,0 +1,12 @@
+{
+  "Print to console": {
+    "prefix": "vue",
+    "body": [
+      "<template>",
+      "  <div>$0</div>",
+      "</template>",
+      ""
+    ],
+    "description": "Log output to console"
+  }
+}
