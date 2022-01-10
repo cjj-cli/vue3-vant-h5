@@ -1,10 +1,10 @@
 {
   // vscode默认启用了根据文件类型自动设置tabsize的选项,避免js文件与eslint设置冲突
   "editor.detectIndentation": false,
-  // 重新设定tabsize
+  // // 重新设定tabsize
   "editor.tabSize": 2,
-  // 保存时自动格式化
-  "editor.formatOnSave": true,
+  // 保存时自动格式化 暂时取消 因为vscode默认格式化与prettier部分有冲突
+  // "editor.formatOnSave": true,
   // 保存时触发的操作
   "editor.codeActionsOnSave": {
     // 修复eslint报错
