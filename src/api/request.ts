@@ -54,7 +54,6 @@ function normalRequest<ResponseData>(
         url: path,
       })
       .then((result: ResponseData) => {
-        console.log(result);
         resolve(result);
       })
       .catch((e) => {
@@ -69,23 +68,20 @@ function normalRequest<ResponseData>(
 
 // 下载
 function downloadRequest(payload: RequestFunctionParams) {
-  return new Promise((resolve) => {
-    const { data, path } = payload;
-    const paramsStr = getUrlParamsByObj(data);
-    const downloadUrl = `/api${path}?${paramsStr}`;
-    console.log('downloadUrl', downloadUrl);
-    window.open(downloadUrl);
-    resolve(null);
-  });
+  const { data, path } = payload;
+  const paramsStr = getUrlParamsByObj(data);
+  const downloadApi = `/api${path}?${paramsStr}`;
+  // console.log('downloadUrl', downloadApi);
+  window.open(downloadApi);
 }
 
 // 公用request方法
 export default function request<TResponseData>(
   payload: RequestFunctionParams,
   options?: RequestOptions
-): Promise<Result<TResponseData>> {
+): Promise<Result<TResponseData>> | void {
   if (options?.type === 'download') {
-    downloadRequest(payload);
+    return downloadRequest(payload);
   }
   return normalRequest<Result<TResponseData>>(payload, options);
 }
