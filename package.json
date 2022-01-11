@@ -1,9 +1,9 @@
 {
-  "name": "vue3-vant-h5",
+  "name": "<%=projectName%>",
   "version": "0.1.0",
-  "private": true,
-  "autor": "cjj",
-  "license": "",
+  "private": "<%=private%>",
+  "autor": "<%=author%>",
+  "license": "<%=license%>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "mock": "cross-env NODE_ENV=mock vue-cli-service serve",
