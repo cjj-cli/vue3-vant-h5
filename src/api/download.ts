@@ -32,8 +32,9 @@ const dataKey_0_0_0_1 = 'data' as any
  * 接口 [downloadFile1↗](http://yapi.smart-xwork.cn/project/71010/interface/api/1737380) 的 **请求类型**
  *
  * @分类 [download↗](http://yapi.smart-xwork.cn/project/71010/interface/api/cat_383537)
+ * @标签 `download`
  * @请求头 `GET /downloadFile1`
- * @更新时间 `2022-01-10 17:15:29`
+ * @更新时间 `2022-01-11 13:54:02`
  */
 export interface DownloadFile1Request {
   id: string
@@ -44,8 +45,9 @@ export interface DownloadFile1Request {
  * 接口 [downloadFile1↗](http://yapi.smart-xwork.cn/project/71010/interface/api/1737380) 的 **返回类型**
  *
  * @分类 [download↗](http://yapi.smart-xwork.cn/project/71010/interface/api/cat_383537)
+ * @标签 `download`
  * @请求头 `GET /downloadFile1`
- * @更新时间 `2022-01-10 17:15:29`
+ * @更新时间 `2022-01-11 13:54:02`
  */
 export interface DownloadFile1Response {}
 
@@ -53,8 +55,9 @@ export interface DownloadFile1Response {}
  * 接口 [downloadFile1↗](http://yapi.smart-xwork.cn/project/71010/interface/api/1737380) 的 **请求配置的类型**
  *
  * @分类 [download↗](http://yapi.smart-xwork.cn/project/71010/interface/api/cat_383537)
+ * @标签 `download`
  * @请求头 `GET /downloadFile1`
- * @更新时间 `2022-01-10 17:15:29`
+ * @更新时间 `2022-01-11 13:54:02`
  */
 type DownloadFile1RequestConfig = Readonly<
   RequestConfig<'http://yapi.smart-xwork.cn/mock/71010', '', '', '/downloadFile1', 'data', string, 'id' | 'name', false>
@@ -64,8 +67,9 @@ type DownloadFile1RequestConfig = Readonly<
  * 接口 [downloadFile1↗](http://yapi.smart-xwork.cn/project/71010/interface/api/1737380) 的 **请求配置**
  *
  * @分类 [download↗](http://yapi.smart-xwork.cn/project/71010/interface/api/cat_383537)
+ * @标签 `download`
  * @请求头 `GET /downloadFile1`
- * @更新时间 `2022-01-10 17:15:29`
+ * @更新时间 `2022-01-11 13:54:02`
  */
 const downloadFile1RequestConfig: DownloadFile1RequestConfig = /*#__PURE__*/ {
   mockUrl: mockUrl_0_0_0_1,
@@ -90,8 +94,9 @@ const downloadFile1RequestConfig: DownloadFile1RequestConfig = /*#__PURE__*/ {
  * 接口 [downloadFile1↗](http://yapi.smart-xwork.cn/project/71010/interface/api/1737380) 的 **请求函数**
  *
  * @分类 [download↗](http://yapi.smart-xwork.cn/project/71010/interface/api/cat_383537)
+ * @标签 `download`
  * @请求头 `GET /downloadFile1`
- * @更新时间 `2022-01-10 17:15:29`
+ * @更新时间 `2022-01-11 13:54:02`
  */
 export const downloadFile1 = /*#__PURE__*/ (requestData: DownloadFile1Request, ...args: UserRequestRestArgs) => {
   return request<DownloadFile1Response>(prepare(downloadFile1RequestConfig, requestData), ...args)

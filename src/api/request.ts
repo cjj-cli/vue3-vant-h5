@@ -67,21 +67,25 @@ function normalRequest<ResponseData>(
 }
 
 // 下载
-function downloadRequest(payload: RequestFunctionParams) {
-  const { data, path } = payload;
-  const paramsStr = getUrlParamsByObj(data);
-  const downloadApi = `/api${path}?${paramsStr}`;
-  // console.log('downloadUrl', downloadApi);
-  window.open(downloadApi);
+function downloadRequest<ResponseData>(payload: RequestFunctionParams) {
+  return new Promise<ResponseData>(() => {
+    console.log(payload);
+
+    const { data, path } = payload;
+    const paramsStr = getUrlParamsByObj(data);
+    const downloadApi = `/api${path}?${paramsStr}`;
+    // console.log('downloadUrl', downloadApi);
+    window.open(downloadApi);
+  });
 }
 
 // 公用request方法
 export default function request<TResponseData>(
   payload: RequestFunctionParams,
   options?: RequestOptions
-): Promise<Result<TResponseData>> | void {
+): Promise<Result<TResponseData>> {
   if (options?.type === 'download') {
-    return downloadRequest(payload);
+    return downloadRequest<Result<TResponseData>>(payload);
   }
   return normalRequest<Result<TResponseData>>(payload, options);
 }
