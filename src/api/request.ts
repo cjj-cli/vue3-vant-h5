@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Toast } from 'vant';
 import { RequestFunctionParams } from 'yapi-to-typescript';
 import { v4 as uuidv4 } from 'uuid';
-import { getUrlParamsByObj } from '@/utils/urlTools';
+import { getUrlParamsByObj } from '@/utils/url-tools';
 
 export interface Result<T> {
   data: T;

@@ -9,16 +9,16 @@
 </template>
 
 <script lang="ts" setup>
-import themeVars from '@/assets/style/themeVars';
+import themeVars from '@/assets/style/theme-vars';
 </script>
 
 <style lang="less">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 
 #nav {

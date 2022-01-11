@@ -52,6 +52,7 @@
     "postcss-px-to-viewport": "^1.1.1",
     "prettier": "^2.2.1",
     "stylelint": "^14.2.0",
+    "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-recommended-vue": "^1.1.0",
     "stylelint-config-standard": "^24.0.0",
     "ts-import-plugin": "^2.0.0",

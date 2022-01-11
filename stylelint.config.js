@@ -1,5 +1,9 @@
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-config-recommended-vue'],
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-recommended-vue',
+    'stylelint-config-recess-order',
+  ],
   rules: {
     indentation: 2,
     'selector-pseudo-class-no-unknown': [
