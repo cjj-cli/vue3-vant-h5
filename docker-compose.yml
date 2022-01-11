@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    container_name: vue3-vant-h5
+    image:
+      ca
+    ports:
+      - 3100:80
+    #   修改volumes : 前面的路径，改路径即为需要替换的config文件路径，注意，必须是绝对路径
+    # volumes:
+    #   - ./docker/nginx.conf:/etc/nginx/nginx.conf
+    #   - ./docker/log/:/var/log/nginx/
+    restart: always
