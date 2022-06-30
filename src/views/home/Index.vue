@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { testGet, testPost } from '@/api/test';
+import { testGet, testPostId } from '@/api/test';
 import { downloadFile1 } from '@/api/download';
 
 async function getData() {
@@ -22,9 +22,10 @@ async function getData() {
 getData();
 
 async function toPost() {
-  const { data } = await testPost({
+  const { data } = await testPostId({
     name: 'ccc',
-    id: 1,
+    id: '1',
+    id1: 1,
   });
 
   console.log('testPost', data.list);

@@ -6,7 +6,10 @@
 
 // @ts-ignore
 // prettier-ignore
-import { Method, RequestBodyType, ResponseBodyType, RequestConfig, RequestFunctionRestArgs, FileData, prepare } from 'yapi-to-typescript'
+import { QueryStringArrayFormat, Method, RequestBodyType, ResponseBodyType, FileData, prepare } from 'yapi-to-typescript'
+// @ts-ignore
+// prettier-ignore
+import type { RequestConfig, RequestFunctionRestArgs } from 'yapi-to-typescript'
 // @ts-ignore
 import request from './request'
 
@@ -88,6 +91,7 @@ const testGetRequestConfig: TestGetRequestConfig = /*#__PURE__*/ {
   requestDataJsonSchema: {},
   responseDataJsonSchema: {},
   requestFunctionName: 'testGet',
+  queryStringArrayFormat: QueryStringArrayFormat.brackets,
   extraInfo: {},
 }
 
@@ -108,22 +112,23 @@ testGet.requestConfig = testGetRequestConfig
  * 接口 [post测试接口1↗](http://yapi.smart-xwork.cn/project/71010/interface/api/1083339) 的 **请求类型**
  *
  * @分类 [test↗](http://yapi.smart-xwork.cn/project/71010/interface/api/cat_253527)
- * @请求头 `POST /testPost`
- * @更新时间 `2022-01-10 16:43:53`
+ * @请求头 `POST /testPost/{id}`
+ * @更新时间 `2022-01-12 11:15:19`
  */
-export interface TestPostRequest {
+export interface TestPostIdRequest {
   name: string
-  id: number
+  id1: number
+  id: string
 }
 
 /**
  * 接口 [post测试接口1↗](http://yapi.smart-xwork.cn/project/71010/interface/api/1083339) 的 **返回类型**
  *
  * @分类 [test↗](http://yapi.smart-xwork.cn/project/71010/interface/api/cat_253527)
- * @请求头 `POST /testPost`
- * @更新时间 `2022-01-10 16:43:53`
+ * @请求头 `POST /testPost/{id}`
+ * @更新时间 `2022-01-12 11:15:19`
  */
-export interface TestPostResponse {
+export interface TestPostIdResponse {
   list: {
     name: string
     id: number
@@ -134,36 +139,37 @@ export interface TestPostResponse {
  * 接口 [post测试接口1↗](http://yapi.smart-xwork.cn/project/71010/interface/api/1083339) 的 **请求配置的类型**
  *
  * @分类 [test↗](http://yapi.smart-xwork.cn/project/71010/interface/api/cat_253527)
- * @请求头 `POST /testPost`
- * @更新时间 `2022-01-10 16:43:53`
+ * @请求头 `POST /testPost/{id}`
+ * @更新时间 `2022-01-12 11:15:19`
  */
-type TestPostRequestConfig = Readonly<
-  RequestConfig<'http://yapi.smart-xwork.cn/mock/71010', '', '', '/testPost', 'data', string, string, false>
+type TestPostIdRequestConfig = Readonly<
+  RequestConfig<'http://yapi.smart-xwork.cn/mock/71010', '', '', '/testPost/{id}', 'data', 'id', string, false>
 >
 
 /**
  * 接口 [post测试接口1↗](http://yapi.smart-xwork.cn/project/71010/interface/api/1083339) 的 **请求配置**
  *
  * @分类 [test↗](http://yapi.smart-xwork.cn/project/71010/interface/api/cat_253527)
- * @请求头 `POST /testPost`
- * @更新时间 `2022-01-10 16:43:53`
+ * @请求头 `POST /testPost/{id}`
+ * @更新时间 `2022-01-12 11:15:19`
  */
-const testPostRequestConfig: TestPostRequestConfig = /*#__PURE__*/ {
+const testPostIdRequestConfig: TestPostIdRequestConfig = /*#__PURE__*/ {
   mockUrl: mockUrl_0_0_0_0,
   devUrl: devUrl_0_0_0_0,
   prodUrl: prodUrl_0_0_0_0,
-  path: '/testPost',
+  path: '/testPost/{id}',
   method: Method.POST,
   requestHeaders: {},
   requestBodyType: RequestBodyType.json,
   responseBodyType: ResponseBodyType.json,
   dataKey: dataKey_0_0_0_0,
-  paramNames: [],
+  paramNames: ['id'],
   queryNames: [],
   requestDataOptional: false,
   requestDataJsonSchema: {},
   responseDataJsonSchema: {},
-  requestFunctionName: 'testPost',
+  requestFunctionName: 'testPostId',
+  queryStringArrayFormat: QueryStringArrayFormat.brackets,
   extraInfo: {},
 }
 
@@ -171,13 +177,13 @@ const testPostRequestConfig: TestPostRequestConfig = /*#__PURE__*/ {
  * 接口 [post测试接口1↗](http://yapi.smart-xwork.cn/project/71010/interface/api/1083339) 的 **请求函数**
  *
  * @分类 [test↗](http://yapi.smart-xwork.cn/project/71010/interface/api/cat_253527)
- * @请求头 `POST /testPost`
- * @更新时间 `2022-01-10 16:43:53`
+ * @请求头 `POST /testPost/{id}`
+ * @更新时间 `2022-01-12 11:15:19`
  */
-export const testPost = /*#__PURE__*/ (requestData: TestPostRequest, ...args: UserRequestRestArgs) => {
-  return request<TestPostResponse>(prepare(testPostRequestConfig, requestData), ...args)
+export const testPostId = /*#__PURE__*/ (requestData: TestPostIdRequest, ...args: UserRequestRestArgs) => {
+  return request<TestPostIdResponse>(prepare(testPostIdRequestConfig, requestData), ...args)
 }
 
-testPost.requestConfig = testPostRequestConfig
+testPostId.requestConfig = testPostIdRequestConfig
 
 /* prettier-ignore-end */

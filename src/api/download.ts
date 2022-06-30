@@ -6,7 +6,10 @@
 
 // @ts-ignore
 // prettier-ignore
-import { Method, RequestBodyType, ResponseBodyType, RequestConfig, RequestFunctionRestArgs, FileData, prepare } from 'yapi-to-typescript'
+import { QueryStringArrayFormat, Method, RequestBodyType, ResponseBodyType, FileData, prepare } from 'yapi-to-typescript'
+// @ts-ignore
+// prettier-ignore
+import type { RequestConfig, RequestFunctionRestArgs } from 'yapi-to-typescript'
 // @ts-ignore
 import request from './request'
 
@@ -87,6 +90,7 @@ const downloadFile1RequestConfig: DownloadFile1RequestConfig = /*#__PURE__*/ {
   requestDataJsonSchema: {},
   responseDataJsonSchema: {},
   requestFunctionName: 'downloadFile1',
+  queryStringArrayFormat: QueryStringArrayFormat.brackets,
   extraInfo: {},
 }
 
